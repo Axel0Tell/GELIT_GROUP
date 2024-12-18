@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ArtworkLio.css">
+    <title>Art</title>
+</head>
+<body>
+    <h1>Perfect but...</h1>
+    <div class="container">
+        <img src="pictures/Artwork_Lio.jpg" alt="Artwork">
+    </div>
+
+   
+    <audio id="background-music" loop>
+        <source src="bg Music/Lone Harvest_Lio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button class="play-button" onclick="playAudio()">🎧</button>
+    <button class="back-button" onclick="goBack()">⬅</button>
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+       
+        function playAudio() {
+            var audio = document.getElementById('background-music');
+            audio.play().catch(function(error) {
+                console.log('Error playing audio:', error);
+            });
+        }
+    </script>
+</body>
+</html>
